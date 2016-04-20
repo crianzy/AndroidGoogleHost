@@ -2,7 +2,7 @@
 方便Root了的Android手机 随时获取更新最新的GoogleHost
 
 # Host来源
-Host来自于:[racaljk/hosts](http://zh.wikipedia.com/wiki/Markdown)
+Host来自于:[racaljk/hosts](https://github.com/racaljk/hosts)
 
 [host下载地址](https://coding.net/u/scaffrey/p/hosts/git/raw/master/hosts)
 
