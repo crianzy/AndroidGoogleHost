@@ -5,6 +5,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.imczy.googlehost.util.CloseUtil;
@@ -48,8 +50,16 @@ public class HostDetailActivity extends AppCompatActivity {
 					mHandler.postDelayed(new Runnable() {
 						@Override
 						public void run() {
+							// 延迟显示 mTextView 不然会卡在 启动 Activity 页面
 							mTextView.setText(hostString);
-							dismissDialog();
+
+							mHandler.postDelayed(new Runnable() {
+								@Override
+								public void run() {
+									// 延迟 dialog 消失 显示 大量的Host 需要时间
+									dismissDialog();
+								}
+							}, 300);
 						}
 					}, 300);
 				} catch (Exception e) {
@@ -67,7 +77,8 @@ public class HostDetailActivity extends AppCompatActivity {
 		if (mProgressDialog == null) {
 			mProgressDialog = new ProgressDialog(this);
 		}
-		mProgressDialog.setTitle("loading ....");
+		mProgressDialog.setTitle("");
+		mProgressDialog.setMessage(getString(R.string.loading));
 		mProgressDialog.show();
 	}
 

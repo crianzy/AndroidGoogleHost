@@ -3,6 +3,7 @@ package com.imczy.googlehost;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.widget.TextView;
 
 /**
@@ -29,9 +30,9 @@ public class AboutActivity extends AppCompatActivity {
 		mHostGithubTxt.setText(Html.fromHtml(hostGithub));
 		mAppGithubTxt.setText(Html.fromHtml(appGithub));
 
-//		mAboutTxt.setMovementMethod(LinkMovementMethod.getInstance());
-//		mAppGithubTxt.setMovementMethod(LinkMovementMethod.getInstance());
-//		mAppGithubTxt.setMovementMethod(LinkMovementMethod.getInstance());
+		mAboutTxt.setMovementMethod(LinkMovementMethod.getInstance());
+		mAppGithubTxt.setMovementMethod(LinkMovementMethod.getInstance());
+		mAppGithubTxt.setMovementMethod(LinkMovementMethod.getInstance());
 
 	}
 

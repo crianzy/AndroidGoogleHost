@@ -175,7 +175,8 @@ public class MainActivity extends AppCompatActivity {
 		if (mProgressDialog == null) {
 			mProgressDialog = new ProgressDialog(getContext());
 		}
-		mProgressDialog.setTitle("loading ....");
+		mProgressDialog.setTitle("");
+		mProgressDialog.setMessage(getString(R.string.loading));
 		mProgressDialog.show();
 	}
 
