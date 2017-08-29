@@ -23,7 +23,7 @@ public class DownloadUtil {
 	public static void downloadHostFile(final Context context, final DownloadListener downloadListener) {
 		AsyncHttpClient mClient = new AsyncHttpClient();
 		//TODO umeng配置下载链接
-		String url = "https://coding.net/u/scaffrey/p/hosts/git/raw/master/hosts";
+		String url = "https://coding.net/u/scaffrey/p/hosts/git/raw/master/hosts-files/hosts";
 		mClient.get(context, url, new AsyncHttpResponseHandler() {
 			@Override
 			public void onSuccess(int statusCode, final Header[] headers, final byte[] bytes) {
